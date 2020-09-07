@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnOpenSalesForceTapped(_ sender: UIButton) {
-        let appUrl = URL(string: "ms-outlook://")!
-        let appStoreURL = URL(string: "itms://apps.apple.com/au/app/microsoft-outlook/id951937596")!
+        guard let appUrl = URL(string: "ms-outlook://") else { return }
+        guard let appStoreURL = URL(string: "itms://apps.apple.com/au/app/microsoft-outlook/id951937596") else { return }
         
         if UIApplication.shared.canOpenURL(appUrl) {
            UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
