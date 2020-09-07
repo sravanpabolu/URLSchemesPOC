@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  URLSchemesPOC
 //
-//  Created by Pabolu, Sravan Kumar (Cognizant) on 07/09/20.
+//  Created by Sravan on 07/09/20.
 //  Copyright © 2020 Sravan Kumar Pabolu. All rights reserved.
 //
 
@@ -15,6 +15,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func btnOpenSalesForceTapped(_ sender: UIButton) {
+        let appUrl = URL(string: "ms-outlook://")!
+        let appStoreURL = URL(string: "itms://apps.apple.com/au/app/microsoft-outlook/id951937596")!
+        
+        if UIApplication.shared.canOpenURL(appUrl) {
+           UIApplication.shared.open(appUrl, options: [:], completionHandler: nil)
+        }
+        else {
+           UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
+        }
+    }
 
 }
 

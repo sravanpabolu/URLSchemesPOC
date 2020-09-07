@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  URLSchemesPOC
 //
-//  Created by Pabolu, Sravan Kumar (Cognizant) on 07/09/20.
+//  Created by Sravan on 07/09/20.
 //  Copyright © 2020 Sravan Kumar Pabolu. All rights reserved.
 //
 
